@@ -23,9 +23,7 @@
     section{padding:100px 0;position:relative}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;border-top:1px solid rgba(33,53,73,.3);padding-top:16px;margin-bottom:38px}.section-head h2{font-size:clamp(2.8rem,5vw,5.4rem);line-height:.98;margin:0}.section-index{font:700 .7rem Bitter,serif;letter-spacing:.15em;color:var(--ash)}
     .feature{display:grid;grid-template-columns:1.3fr .7fr;gap:clamp(30px,5vw,72px);align-items:center}.media{aspect-ratio:16/9;background:var(--navy);position:relative;overflow:hidden}.media:before{content:"LATEST FILM";position:absolute;inset:22px auto auto 22px;color:var(--paper);font:700 .68rem Bitter,serif;letter-spacing:.14em}.media:after{content:"ADD CURRENT YOUTUBE THUMBNAIL";position:absolute;inset:auto 22px 22px 22px;color:var(--ash);font:700 .65rem Bitter,serif;letter-spacing:.12em}.play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72px;height:72px;border:1px solid var(--paper);border-radius:50%}.play:after{content:"";position:absolute;left:30px;top:23px;border-left:18px solid var(--paper);border-top:12px solid transparent;border-bottom:12px solid transparent}.feature-copy h3{font-size:clamp(2.7rem,5vw,5.6rem);line-height:.98;margin:12px 0 22px}.meta{color:var(--ash);font-size:.76rem;text-transform:uppercase;letter-spacing:.1em}
     .dark{background:var(--navy);color:var(--paper)}.dark .eyebrow{color:var(--ash)}.dispatch{display:grid;grid-template-columns:1fr .85fr;gap:8vw;align-items:end}.dispatch h2{font-size:clamp(4rem,8vw,8rem);line-height:.98;margin:0}.dispatch h2 em{font-style:normal;color:var(--red)}.dispatch-copy{max-width:520px}.form{display:flex;margin-top:28px;border-bottom:1px solid var(--paper)}.form input{flex:1;background:none;border:0;color:var(--paper);font:400 1rem Bitter,serif;padding:14px 0;outline:none}.form button{background:none;border:0;color:var(--paper);font:700 .75rem Bitter,serif;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}.form button:hover{color:var(--red)}
-    .about-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:8vw;align-items:start}
-.portrait{min-height:560px;background:var(--navy);overflow:hidden}
-    .portrait img{display:block;width:100%;height:100%;min-height:560px;object-fit:cover;object-position:center top}.portrait:after{content:"ADD BRANDON PORTRAIT / FIELD PHOTO";position:absolute;left:20px;bottom:20px;font:700 .65rem Bitter,serif;letter-spacing:.1em;color:var(--navy)}.about-copy h2{font-size:clamp(3.6rem,7vw,7.3rem);line-height:.98;margin:25px 0 30px}.about-copy p{font-size:1.05rem;max-width:690px}.about-copy p:first-of-type{font-size:1.32rem;line-height:1.45}
+    .about-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:8vw;align-items:start}.portrait{aspect-ratio:4/5;background:linear-gradient(135deg,#d8d5ce,#aaa69c);position:relative}.about-copy h2{font-size:clamp(3.6rem,7vw,7.3rem);line-height:.98;margin:25px 0 30px}.about-copy p{font-size:1.05rem;max-width:690px}.about-copy p:first-of-type{font-size:1.32rem;line-height:1.45}
     .escape-card{border:1px solid rgba(33,53,73,.35);padding:clamp(28px,5vw,68px);display:grid;grid-template-columns:1.2fr .8fr;gap:7vw;align-items:end;position:relative}.escape-card h2{font-size:clamp(3.4rem,6.8vw,7rem);line-height:.98;margin:28px 0 0}.escape-copy{max-width:440px}.escape-card .stamp{position:absolute;right:7%;top:-20px}
     .access{text-align:center;padding:130px 0}.access h2{font-size:clamp(5rem,11vw,11rem);line-height:.98;margin:0 0 38px}.access p{max-width:670px;margin:0 auto 18px}.access .stamp{margin:28px 0 34px}.access .textlink{color:var(--paper)}
     footer{padding:44px 0 58px;border-top:1px solid rgba(33,53,73,.22)}.foot{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end}.foot-brand{font-size:2.4rem}.foot small{display:block;color:var(--ash);margin-top:8px}.foot-links{display:flex;gap:20px;font-size:.74rem;text-transform:uppercase;letter-spacing:.1em}.ghost{opacity:.6;margin-top:28px}
@@ -36,14 +34,12 @@
     .hero>div{max-width:980px;position:relative;z-index:2}
     .hero::after{content:"";position:absolute;right:-555px;bottom:-315px;width:calc((clamp(390px,42vw,650px)) * 3);aspect-ratio:1/1;background:url('frame-round-followbrando.png') center/contain no-repeat;opacity:.075;transform:rotate(-9deg);pointer-events:none;z-index:-1}
     @media(max-width:780px){.hero::after{width:390px;right:-155px;bottom:-90px;opacity:.06}}
+      .portrait img{display:block;width:100%;height:100%;min-height:560px;object-fit:cover;object-position:center top}
   </style>
 </head>
 <body>
   <header class="wrap nav">
-    <span class="brand" >Follow Brando</span>
-    <nav class="navlinks" aria-label="Primary">
-      <a href="#latest">Videos</a><a href="#dispatches">Writing</a><a href="#about">About</a><a href="#escape">Escape</a><a href="#private">Private</a>
-    </nav>
+    <div class="brand">Follow Brando</div>
   </header>
 
   <main>
@@ -65,29 +61,29 @@
     <section id="latest" class="wrap" style="z-index:2">
       <div class="section-head"><div><div class="eyebrow">01 / Latest</div><h2 class="display">From the channel</h2></div><div class="section-index">YOUTUBE / 2026</div></div>
       <div class="feature">
-        <span class="media"  aria-label="Watch latest video"><span class="play"></span></span>
-        <div class="feature-copy"><div class="meta">Latest film · Saigon</div><h3 class="display">THE VISA TRAP NOBODY TALKS ABOUT</h3><p>What looks like freedom from the outside can become another kind of dependency once you actually build a life abroad.</p><span class="textlink" >Watch on YouTube →</span></div>
+        <a class="media" href="https://youtu.be/70yIZlrCJxc" target="_blank" rel="noopener" aria-label="Watch latest video"><span class="play"></span></a>
+        <div class="feature-copy"><div class="meta">Latest film · Saigon</div><h3 class="display">THE VISA TRAP NOBODY TALKS ABOUT</h3><p>What looks like freedom from the outside can become another kind of dependency once you actually build a life abroad.</p><a class="textlink" href="https://youtu.be/70yIZlrCJxc" target="_blank" rel="noopener">Watch on YouTube →</a></div>
       </div>
     </section>
 
     <section id="dispatches" class="dark">
       <div class="wrap dispatch">
         <div><div class="eyebrow">Dispatches from out here</div><h2 class="display">You don’t need<br>another <em>newsletter.</em></h2></div>
-        <div class="dispatch-copy"><p>Neither do I.</p><p>I send something when I have something worth sending — new videos, ideas I’m working through, things I learned the expensive way, and occasional opportunities that don’t make it onto YouTube.</p><form class="form" action="#" method="post"><input type="email" placeholder="YOUR EMAIL" aria-label="Email address"><button type="submit">Join the list →</button></form></div>
+        <div class="dispatch-copy"><p>Neither do I.</p><p>I send something when I have something worth sending — new videos, ideas I’m working through, things I learned the expensive way, and occasional opportunities that don’t make it onto YouTube.</p><a class="textlink light" href="https://follow-brando.kit.com/b35e574e32" target="_blank" rel="noopener">Join the list →</a></div>
       </div>
     </section>
 
     
 
     <section id="escape" class="wrap">
-      <div class="escape-card"><span class="stamp stamp-short">Free</span><div><div class="eyebrow">The Expat Escape Kit + FU Money Calculator</div><h2 class="display">How much money does your escape cost?</h2></div><div class="escape-copy"><p>Figure out what leaving actually costs before you blow up your life.</p><a class="textlink" href="/escape">Get the kit →</a></div></div>
+      <div class="escape-card"><span class="stamp stamp-short">Free</span><div><div class="eyebrow">The Expat Escape Kit + FU Money Calculator</div><h2 class="display">How much money does your escape cost?</h2></div><div class="escape-copy"><p>Figure out what leaving actually costs before you blow up your life.</p><a class="textlink" href="https://follow-brando.kit.com/b35e574e32" target="_blank" rel="noopener">Get the kit →</a></div></div>
     </section>
 
     <section id="private" class="dark access">
-      <div class="wrap"><div class="eyebrow">Private conversations</div><h2 class="display">Want to talk?</h2><p>I occasionally open a small number of conversations with people working through an interesting decision, business, reinvention or move.</p><p>I don’t do relocation concierge work. I don’t have a course to sell you. And I probably can’t tell you which SIM card to buy.</p><span class="stamp stamp-wide">Limited availability</span><br><a class="textlink" href="/call">See what’s open →</a></div>
+      <div class="wrap"><div class="eyebrow">Private conversations</div><h2 class="display">Want to talk?</h2><p>I occasionally open a small number of conversations with people working through an interesting decision, business, reinvention or move.</p><p>I don’t do relocation concierge work. I don’t have a course to sell you. And I probably can’t tell you which SIM card to buy.</p><span class="stamp stamp-wide">Limited availability</span><br><a class="textlink" href="https://follow-brando.kit.com/6248aa79a4" target="_blank" rel="noopener">See what’s open →</a></div>
     </section>
   </main>
 
-  <footer><div class="wrap foot"><div><div class="brand foot-brand">Follow Brando</div><small>Somewhere in Southeast Asia. © 2026 Brandon Cole.</small><span class="stamp stamp-medium ghost">Come back later.</span></div><div class="foot-links"><span >YouTube</span><a href="#dispatches">Email</a><span >Instagram</span><a href="/work">Work</a><a href="mailto:hello@followbrando.com">Contact</a></div></div></footer>
+  <footer><div class="wrap foot"><div><div class="brand foot-brand">Follow Brando</div><small>Somewhere in Southeast Asia. © 2026 Brandon Cole.</small><span class="stamp stamp-medium ghost">Come back later.</span></div><div class="foot-links"><a href="https://www.youtube.com/@FollowBrando" target="_blank" rel="noopener">YouTube</a><a href="https://follow-brando.kit.com/b35e574e32" target="_blank" rel="noopener">Contact</a></div></div></footer>
 </body>
 </html>
