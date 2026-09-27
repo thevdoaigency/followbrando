@@ -36,7 +36,9 @@
     @media(max-width:780px){.hero::after{width:390px;right:-155px;bottom:-90px;opacity:.06}}
       .portrait img{display:block;width:100%;height:100%;min-height:560px;object-fit:cover;object-position:center top}
   
-    .media img{display:block;width:100%;height:100%;object-fit:cover}
+    .media-thumb:before,.media-thumb:after{content:none!important}
+    .media-thumb img{display:block;width:100%;height:100%;object-fit:cover}
+
   </style>
 </head>
 <body>
@@ -63,7 +65,7 @@
     <section id="latest" class="wrap" style="z-index:2">
       <div class="section-head"><div><div class="eyebrow">01 / Latest</div><h2 class="display">From the channel</h2></div><div class="section-index">YOUTUBE / 2026</div></div>
       <div class="feature">
-        <a class="media" href="https://youtu.be/70yIZlrCJxc" target="_blank" rel="noopener" aria-label="Watch latest video"><span class="play"></span></a>
+        <a class="media media-thumb" href="https://youtu.be/70yIZlrCJxc" target="_blank" rel="noopener" aria-label="Watch latest video"><img src="latest-video-thumbnail.png" alt="Valid Visa — Denied"></a>
         <div class="feature-copy"><div class="meta">Latest film · Saigon</div><h3 class="display">THE VISA TRAP NOBODY TALKS ABOUT</h3><p>What looks like freedom from the outside can become another kind of dependency once you actually build a life abroad.</p><a class="textlink" href="https://youtu.be/70yIZlrCJxc" target="_blank" rel="noopener">Watch on YouTube →</a></div>
       </div>
     </section>
