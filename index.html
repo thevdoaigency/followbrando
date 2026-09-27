@@ -49,6 +49,31 @@
       #beginning .media{order:2}
     }
 
+  
+    #beginning{position:relative;overflow:visible;z-index:2}
+    #beginning .feature{position:relative;z-index:2}
+    #beginning::after{
+      content:"";
+      position:absolute;
+      left:-260px;
+      top:-320px;
+      width:calc((clamp(390px,42vw,650px)) * 3);
+      aspect-ratio:1/1;
+      background:url('june-4th-2022-stamp.png') center/contain no-repeat;
+      opacity:.075;
+      transform:rotate(9deg);
+      pointer-events:none;
+      z-index:-1;
+    }
+    @media(max-width:780px){
+      #beginning::after{
+        width:420px;
+        left:-120px;
+        top:-120px;
+        opacity:.06;
+      }
+    }
+
   </style>
 </head>
 <body>
