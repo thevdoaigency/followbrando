@@ -32,7 +32,7 @@
     /* Homepage revision: hero is now a single editorial masthead. */
     .hero{grid-template-columns:1fr;position:relative;overflow:visible;padding-bottom:55px;z-index:1}
     .hero>div{max-width:980px;position:relative;z-index:2}
-    .hero::after{content:"";position:absolute;right:-55px;bottom:-115px;width:clamp(390px,42vw,650px);aspect-ratio:1/1;background:url('frame-round-followbrando.png') center/contain no-repeat;opacity:.075;transform:rotate(-9deg);pointer-events:none;z-index:-1}
+    .hero::after{content:"";position:absolute;right:-55px;bottom:-115px;width:calc((clamp(390px,42vw,650px)) * 3);aspect-ratio:1/1;background:url('frame-round-followbrando.png') center/contain no-repeat;opacity:.075;transform:rotate(-9deg);pointer-events:none;z-index:-1}
     @media(max-width:780px){.hero::after{width:390px;right:-155px;bottom:-90px;opacity:.06}}
   </style>
 </head>
