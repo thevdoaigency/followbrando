@@ -74,11 +74,54 @@
       }
     }
 
+  
+    .free-downloads-callout{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-left:auto;
+    }
+    .free-downloads-callout img{
+      width:42px;
+      height:auto;
+      flex:0 0 auto;
+      transform:rotate(-90deg);
+      transform-origin:center;
+    }
+    .free-downloads-callout a{
+      font-family:'Rubik Dirt',Anton,sans-serif;
+      color:var(--red);
+      font-size:clamp(1rem,1.45vw,1.35rem);
+      line-height:1;
+      text-transform:uppercase;
+      letter-spacing:.02em;
+      border-bottom:2px solid var(--red);
+      padding:7px 0 6px;
+      white-space:nowrap;
+      transform:rotate(-1.5deg);
+    }
+    .free-downloads-callout a:hover{opacity:.72}
+    @media(max-width:780px){
+      .nav{height:auto;min-height:82px;gap:18px;padding:14px 0}
+      .free-downloads-callout{gap:4px}
+      .free-downloads-callout img{width:30px}
+      .free-downloads-callout a{
+        font-size:.88rem;
+        white-space:normal;
+        max-width:150px;
+        text-align:right;
+      }
+    }
+
   </style>
 </head>
 <body>
   <header class="wrap nav">
     <div class="brand">Follow Brando</div>
+    <div class="free-downloads-callout">
+      <img src="arrow-red.png" alt="" aria-hidden="true">
+      <a href="https://follow-brando.kit.com/b35e574e32" target="_blank" rel="noopener">Get my free downloads</a>
+    </div>
   </header>
 
   <main>
